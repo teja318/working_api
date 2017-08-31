@@ -1,0 +1,9 @@
+<h2>Enter Name </h2>
+<%= form_tag(gender_determine_path, method: :get) do %>
+<label>Name : </label>
+	<%= text_field_tag :name %></br>
+	<%= submit_tag "search" %> </br>
+	<% end %>
+ <% if !@result.nil? %>
+ <h4>The gender <% params[:name] %> is <%= @result["gender"] %></h4>
+ <% end %>

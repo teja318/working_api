@@ -1,0 +1,15 @@
+<h2>Enter origin </h2>
+<%= form_tag(google_distance_path, method: :get) do %>
+<label>Origin : </label><br>
+<%= text_field_tag :origin, params[:destination] %></br>
+
+<label>Destination : </label></br>
+<%= text_field_tag :destination, params[:origin] %><br>
+
+<%= submit_tag "search" %> </br>
+
+<% end %>
+<% if !@result.nil? %>
+ <h3> Distance is <%= @result["rows"][0]["elements"][0]["distance"]["text"] %> </h3>
+ <h3> time is <%= @result["rows"][0]["elements"][0]["duration"]["text"] %> </h3>
+ <% end %>
