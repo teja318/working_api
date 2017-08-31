@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get 'google/distance'
+  namespace :api, {format: :json} do 
+     namespace :v1 do 
+       resources :categories
+       resources :products
+  end 
+   end
+
+ get 'google/distance'
   get 'google/address'
   get 'gender/determine'
 

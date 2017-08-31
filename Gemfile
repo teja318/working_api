@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+gem 'faker'
+gem 'rabl'
 
 gem 'httparty'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
